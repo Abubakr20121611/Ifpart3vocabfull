@@ -7,338 +7,258 @@
 
 <style>
 :root{
-    --bg:#eef3f8;
-    --card:#ffffff;
-    --text:#172033;
-    --primary:#2563eb;
-    --border:#dbe3ee;
-    --soft:#f5f8fc;
-    --danger:#dc2626;
-    --success:#16a34a;
+--bg:#eef3f8;
+--card:#fff;
+--text:#172033;
+--primary:#2563eb;
+--border:#dbe3ee;
+--soft:#f5f8fc;
+--danger:#dc2626;
+--success:#16a34a;
 }
 
-*{
-    box-sizing:border-box;
-}
+*{box-sizing:border-box}
 
 body{
-    margin:0;
-    font-family:Arial,sans-serif;
-    background:var(--bg);
-    color:var(--text);
+margin:0;
+font-family:Arial,sans-serif;
+background:var(--bg);
+color:var(--text);
 }
 
 body.dark{
-    --bg:#111827;
-    --card:#1f2937;
-    --text:#f3f4f6;
-    --border:#374151;
-    --soft:#273449;
+--bg:#111827;
+--card:#1f2937;
+--text:#f3f4f6;
+--border:#374151;
+--soft:#273449;
 }
 
 .container{
-    max-width:950px;
-    width:94%;
-    margin:25px auto;
+max-width:950px;
+width:94%;
+margin:25px auto;
 }
 
 .card{
-    background:var(--card);
-    padding:28px;
-    border-radius:22px;
-    box-shadow:0 10px 30px rgba(0,0,0,.12);
-    margin-bottom:20px;
+background:var(--card);
+padding:30px;
+border-radius:22px;
+box-shadow:0 10px 30px rgba(0,0,0,.12);
+margin-bottom:20px;
 }
 
 .hidden{
-    display:none!important;
+display:none!important;
 }
 
 .center{
-    text-align:center;
-}
-
-h1,h2,h3{
-    margin-top:0;
-}
-
-.topbar{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:10px;
-    margin-bottom:20px;
+text-align:center;
 }
 
 .brand{
-    font-size:20px;
-    font-weight:bold;
-    color:var(--primary);
+font-size:20px;
+font-weight:bold;
+color:var(--primary);
+}
+
+.topbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:20px;
 }
 
 .theme-btn{
-    background:var(--soft);
-    border:1px solid var(--border);
-    border-radius:10px;
-    padding:9px 13px;
-    cursor:pointer;
-    font-size:18px;
+background:var(--soft);
+border:1px solid var(--border);
+border-radius:10px;
+padding:9px 13px;
+cursor:pointer;
+font-size:18px;
 }
 
 .telegram{
-    margin:20px 0;
-    padding:12px 16px;
-    border-radius:12px;
-    background:#e8f3ff;
-    text-align:center;
-    font-weight:bold;
+margin:20px 0;
+padding:12px 16px;
+border-radius:12px;
+background:#e8f3ff;
+text-align:center;
+font-weight:bold;
 }
 
 .telegram a{
-    color:#1687d9;
-    text-decoration:none;
+color:#1687d9;
+text-decoration:none;
 }
 
 .telegram svg{
-    width:18px;
-    height:18px;
-    vertical-align:middle;
-    margin-right:5px;
+width:18px;
+height:18px;
+vertical-align:middle;
+margin-right:5px;
 }
 
-.lesson-list{
-    display:flex;
-    flex-direction:column;
-    gap:10px;
-}
-
-.lesson-row{
-    display:grid;
-    grid-template-columns:1fr 55px;
-    align-items:center;
-    border:2px solid var(--border);
-    border-radius:14px;
-    overflow:hidden;
-    background:var(--soft);
-}
-
-.lesson-name{
-    padding:16px;
-    font-weight:bold;
-    cursor:pointer;
-}
-
-.lesson-name:hover{
-    color:var(--primary);
-}
-
-.review-btn{
-    height:100%;
-    border:0;
-    border-left:2px solid var(--border);
-    background:transparent;
-    cursor:pointer;
-    font-size:20px;
-}
-
-.review-btn:hover{
-    background:rgba(37,99,235,.1);
+.begin-button{
+font-size:20px;
+padding:17px 35px;
 }
 
 .exam-header{
-    text-align:center;
+text-align:center;
 }
 
 .progress{
-    font-weight:bold;
-    margin:10px 0;
+font-weight:bold;
+margin:10px 0;
 }
 
 .timer{
-    font-size:30px;
-    font-weight:bold;
-    color:var(--primary);
-    margin:10px 0 20px;
+font-size:30px;
+font-weight:bold;
+color:var(--primary);
+margin:10px 0 20px;
 }
 
 .meaning{
-    background:var(--soft);
-    border-left:5px solid var(--primary);
-    padding:15px;
-    border-radius:10px;
-    margin:15px 0;
-    font-size:18px;
+background:var(--soft);
+border-left:5px solid var(--primary);
+padding:15px;
+border-radius:10px;
+margin:15px 0;
+font-size:18px;
 }
 
 input,
 textarea{
-    width:100%;
-    padding:14px;
-    border:2px solid var(--border);
-    border-radius:12px;
-    background:var(--card);
-    color:var(--text);
-    font-size:16px;
-    outline:none;
+width:100%;
+padding:14px;
+border:2px solid var(--border);
+border-radius:12px;
+background:var(--card);
+color:var(--text);
+font-size:16px;
+outline:none;
 }
 
 textarea{
-    min-height:150px;
-    resize:vertical;
+min-height:150px;
+resize:vertical;
 }
 
 label{
-    display:block;
-    font-weight:bold;
-    margin:15px 0 7px;
+display:block;
+font-weight:bold;
+margin:15px 0 7px;
 }
 
 button{
-    border:0;
-    border-radius:12px;
-    padding:13px 19px;
-    margin:5px;
-    font-weight:bold;
-    cursor:pointer;
-    font-size:15px;
+border:0;
+border-radius:12px;
+padding:13px 19px;
+margin:5px;
+font-weight:bold;
+cursor:pointer;
+font-size:15px;
 }
 
 .primary{
-    background:var(--primary);
-    color:white;
+background:var(--primary);
+color:white;
 }
 
 .secondary{
-    background:#e5e7eb;
-    color:#111827;
+background:#e5e7eb;
+color:#111827;
 }
 
 body.dark .secondary{
-    background:#374151;
-    color:white;
+background:#374151;
+color:white;
 }
 
 .button-area{
-    display:flex;
-    flex-wrap:wrap;
-    gap:5px;
-    margin-top:15px;
+display:flex;
+flex-wrap:wrap;
+gap:5px;
+margin-top:15px;
 }
 
 .feedback{
-    margin-top:20px;
-    padding:18px;
-    border-radius:14px;
-    background:var(--soft);
-    line-height:1.7;
+margin-top:20px;
+padding:18px;
+border-radius:14px;
+background:var(--soft);
+line-height:1.7;
 }
 
 .correct{
-    color:var(--success);
-    font-weight:bold;
+color:var(--success);
+font-weight:bold;
 }
 
 .wrong{
-    color:var(--danger);
-    font-weight:bold;
+color:var(--danger);
+font-weight:bold;
 }
 
 .grammar-error{
-    margin:12px 0;
-    padding:14px;
-    border-left:4px solid var(--danger);
-    background:rgba(220,38,38,.08);
-    border-radius:8px;
+margin:12px 0;
+padding:14px;
+border-left:4px solid var(--danger);
+background:rgba(220,38,38,.08);
+border-radius:8px;
 }
 
 .wrong-text{
-    font-weight:bold;
-    color:var(--danger);
-}
-
-.suggestions{
-    margin-top:7px;
+font-weight:bold;
+color:var(--danger);
 }
 
 .score{
-    font-size:42px;
-    font-weight:bold;
-    color:var(--primary);
-    text-align:center;
+font-size:42px;
+font-weight:bold;
+color:var(--primary);
+text-align:center;
 }
 
 .result-box{
-    background:var(--soft);
-    padding:18px;
-    border-radius:14px;
-    margin:10px 0;
-}
-
-.modal{
-    position:fixed;
-    inset:0;
-    background:rgba(0,0,0,.65);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    padding:20px;
-    z-index:9999;
-}
-
-.modal-content{
-    max-width:700px;
-    width:100%;
-    max-height:85vh;
-    overflow:auto;
-    background:var(--card);
-    color:var(--text);
-    border-radius:20px;
-    padding:25px;
-}
-
-.word-item{
-    padding:12px 0;
-    border-bottom:1px solid var(--border);
-}
-
-.word-item b{
-    color:var(--primary);
+background:var(--soft);
+padding:18px;
+border-radius:14px;
+margin:10px 0;
 }
 
 .cancel-warning{
-    color:var(--danger);
-    font-weight:bold;
-    text-align:center;
-    margin-top:10px;
+color:var(--danger);
+font-weight:bold;
+text-align:center;
+margin-top:10px;
 }
 
 @media(max-width:600px){
 
-    .container{
-        width:96%;
-        margin:12px auto;
-    }
+.container{
+width:96%;
+margin:12px auto;
+}
 
-    .card{
-        padding:20px;
-    }
+.card{
+padding:20px;
+}
 
-    .topbar{
-        align-items:flex-start;
-    }
+.button-area{
+flex-direction:column;
+}
 
-    .button-area{
-        flex-direction:column;
-    }
+button{
+width:100%;
+margin:4px 0;
+}
 
-    button{
-        width:100%;
-        margin:4px 0;
-    }
-
-    .timer{
-        font-size:25px;
-    }
+.timer{
+font-size:25px;
+}
 
 }
 </style>
@@ -348,160 +268,182 @@ body.dark .secondary{
 
 <div class="container">
 
-<!-- LESSON PAGE -->
+<!-- BEGIN PAGE -->
 
-<div id="lessonPage" class="card">
+<div id="beginPage" class="card center">
 
-    <div class="topbar">
-        <div class="brand">📚 IELTS Vocabulary Exam</div>
+<div class="topbar">
 
-        <button
-            class="theme-btn"
-            onclick="toggleTheme()"
-            title="Change theme">
-            🌙
-        </button>
-    </div>
+<div class="brand">
+📚 IELTS Vocabulary Exam
+</div>
 
-    <h1 class="center">Choose a Lesson</h1>
+<button
+class="theme-btn"
+onclick="toggleTheme()">
+🌙
+</button>
 
-    <div class="telegram">
-        <a
-            href="https://t.me/Ieltsmaterialsbyabubakr"
-            target="_blank">
+</div>
 
-            <svg viewBox="0 0 24 24" fill="currentColor">
-                <path d="M21.8 3.2L18.7 20c-.2 1.2-.9 1.5-1.8.9l-5-3.7-2.4 2.3c-.3.3-.5.5-1 .5l.4-5.1 9.3-8.4c.4-.4-.1-.6-.6-.2L6.1 13.5l-4.9-1.6c-1.1-.3-1.1-1.1.2-1.6L20.5 2c.9-.3 1.7.2 1.3 1.2z"/>
-            </svg>
+<h1>🎤 Vocabulary Exam</h1>
 
-            @IeltsmaterialsbyAbubakr
-        </a>
-    </div>
+<p>
+Test your vocabulary from Lessons 21–30.
+</p>
 
-    <div id="lessonList" class="lesson-list"></div>
+<p>
+📝 <b>20 random questions</b>
+</p>
+
+<p>
+⏱️ <b>Time limit: 20 minutes</b>
+</p>
+
+<p>
+🏆 <b>Maximum score: 40 points</b>
+</p>
+
+<div class="telegram">
+
+<a
+href="https://t.me/Ieltsmaterialsbyabubakr"
+target="_blank">
+
+<svg viewBox="0 0 24 24" fill="currentColor">
+<path d="M21.8 3.2L18.7 20c-.2 1.2-.9 1.5-1.8.9l-5-3.7-2.4 2.3c-.3.3-.5.5-1 .5l.4-5.1 9.3-8.4c.4-.4-.1-.6-.6-.2L6.1 13.5l-4.9-1.6c-1.1-.3-1.1-1.1.2-1.6L20.5 2c.9-.3 1.7.2 1.3 1.2z"/>
+</svg>
+
+@IeltsmaterialsbyAbubakr
+
+</a>
+
+</div>
+
+<button
+class="primary begin-button"
+onclick="startExam()">
+
+🚀 BEGIN VOCAB EXAM
+
+</button>
 
 </div>
 
 
-<!-- EXAM PAGE -->
+<!-- EXAM -->
 
 <div id="examPage" class="card hidden">
 
-    <div class="exam-header">
+<div class="exam-header">
 
-        <div class="brand">
-            📚 IELTS Vocabulary Exam
-        </div>
+<div class="brand">
+📚 IELTS Vocabulary Exam
+</div>
 
-        <h2 id="examLesson"></h2>
+<h2>Lessons 21–30</h2>
 
-        <div id="questionCounter" class="progress"></div>
+<div
+id="questionCounter"
+class="progress">
+</div>
 
-        <div id="timer" class="timer">
-            15:00
-        </div>
-
-    </div>
-
-    <div id="wordBox"></div>
-
-    <label>
-        English vocabulary:
-    </label>
-
-    <input
-        id="vocabInput"
-        autocomplete="off"
-        placeholder="Type the English word or phrase"
-    >
-
-    <label>
-        Your English sentence:
-    </label>
-
-    <textarea
-        id="sentenceInput"
-        placeholder="Write an English sentence using the vocabulary..."
-    ></textarea>
-
-    <div class="button-area">
-
-        <button
-            class="primary"
-            onclick="checkCurrentQuestion()">
-            ✅ CHECK
-        </button>
-
-        <button
-            class="secondary"
-            onclick="nextQuestion()">
-            ➡️ NEXT
-        </button>
-
-    </div>
-
-    <div id="questionFeedback"></div>
-
-    <p class="cancel-warning">
-        ⚠️ Leaving this tab/window will cancel the exam.
-    </p>
+<div
+id="timer"
+class="timer">
+20:00
+</div>
 
 </div>
 
 
-<!-- RESULT PAGE -->
+<div id="wordBox"></div>
+
+
+<label>
+English vocabulary:
+</label>
+
+<input
+id="vocabInput"
+autocomplete="off"
+placeholder="Type the English word or phrase"
+>
+
+
+<label>
+Your English sentence:
+</label>
+
+<textarea
+id="sentenceInput"
+placeholder="Write an English sentence using the vocabulary..."
+></textarea>
+
+
+<div class="button-area">
+
+<button
+class="primary"
+onclick="checkCurrentQuestion()">
+
+✅ CHECK
+
+</button>
+
+<button
+class="secondary"
+onclick="nextQuestion()">
+
+➡️ NEXT
+
+</button>
+
+</div>
+
+
+<div id="questionFeedback"></div>
+
+
+<p class="cancel-warning">
+
+⚠️ Leaving this tab/window will cancel the exam.
+
+</p>
+
+</div>
+
+
+<!-- RESULT -->
 
 <div id="resultPage" class="card hidden">
 
-    <div class="center">
+<div class="center">
 
-        <h1>🏆 Exam Completed</h1>
-
-        <div id="finalScore" class="score"></div>
-
-    </div>
-
-    <div id="resultDetails"></div>
-
-    <div class="button-area">
-
-        <button
-            class="primary"
-            onclick="newExam()">
-            🔄 NEW EXAM
-        </button>
-
-    </div>
-
-</div>
-
-</div>
-
-
-<!-- REVIEW MODAL -->
+<h1>🏆 Exam Completed</h1>
 
 <div
-    id="reviewModal"
-    class="modal hidden"
-    onclick="closeReviewOutside(event)">
+id="finalScore"
+class="score">
+</div>
 
-    <div class="modal-content">
+</div>
 
-        <div class="topbar">
+<div id="resultDetails"></div>
 
-            <h2 id="reviewTitle"></h2>
+<div class="button-area">
 
-            <button
-                class="secondary"
-                onclick="closeReview()">
-                ✕
-            </button>
+<button
+class="primary"
+onclick="newExam()">
 
-        </div>
+🔄 NEW EXAM
 
-        <div id="reviewWords"></div>
+</button>
 
-    </div>
+</div>
+
+</div>
 
 </div>
 
@@ -509,14 +451,12 @@ body.dark .secondary{
 <script>
 
 /* =====================================================
-   LESSON DATA
-   Uzbek translation + Russian translation in brackets
+VOCABULARY
 ===================================================== */
 
 const lessons = {
 
 "Lesson 21":[
-
 ["Experience","tajriba, boshdan kechirmoq (опыт)"],
 ["Tradition","an’ana (традиция)"],
 ["Hospitality","mehmondo‘stlik (гостеприимство)"],
@@ -542,11 +482,9 @@ const lessons = {
 ["refer to","ga ishora qilmoq; tilga olmoq (ссылаться на; упоминать)"],
 ["work as","sifatida ishlamoq (работать кем-либо)"],
 ["work for","uchun ishlamoq (работать на/в)"]
-
 ],
 
 "Lesson 22":[
-
 ["Poaching","noqonuniy ovchilik (браконьерство)"],
 ["Endangered","yo‘qolib ketish xavfida (находящийся под угрозой исчезновения)"],
 ["Survival","omon qolish (выживание)"],
@@ -572,11 +510,9 @@ const lessons = {
 ["allergic to","ga allergiyasi bor (имеющий аллергию на)"],
 ["covered in/with","bilan qoplangan (покрытый)"],
 ["pleased with","dan mamnun (довольный)"]
-
 ],
 
 "Lesson 23":[
-
 ["Generation gap","avlodlar o‘rtasidagi farq (разрыв между поколениями)"],
 ["Misunderstanding","tushunmovchilik (недопонимание)"],
 ["Tradition","an’ana (традиция)"],
@@ -602,11 +538,9 @@ const lessons = {
 ["die from/of","...dan vafot etmoq (умереть от)"],
 ["fight against","ga qarshi kurashmoq (бороться против)"],
 ["recover from","dan tuzalmoq (восстановиться после)"]
-
 ],
 
 "Lesson 24":[
-
 ["Experience","tajriba (опыт)"],
 ["Volunteer","ko‘ngilli (волонтёр)"],
 ["Culture","madaniyat (культура)"],
@@ -632,11 +566,9 @@ const lessons = {
 ["a recipe for","... uchun retsept (рецепт)"],
 ["amazed at/by","...dan hayratlangan (поражённый, удивлённый)"],
 ["disappointed with","...dan hafsalasi pir bo‘lgan (разочарованный)"]
-
 ],
 
 "Lesson 25":[
-
 ["Opportunity","imkoniyat (возможность)"],
 ["Leadership","yetakchilik (лидерство)"],
 ["Promotion","lavozim ko‘tarilishi (повышение по службе)"],
@@ -662,11 +594,9 @@ const lessons = {
 ["similar to","ga o‘xshash (похожий на)"],
 ["change sth from sth into","...dan ...ga aylantirmoq (изменить что-либо из ... в ...)"],
 ["describe sth as","... deb ta’riflamoq (описать что-либо как)"]
-
 ],
 
 "Lesson 26":[
-
 ["Valuable","qimmatli (ценный)"],
 ["Understood","tushunilgan (понятный, понятый)"],
 ["Judgment","hukm, tanqid (суждение, оценка)"],
@@ -692,11 +622,9 @@ const lessons = {
 ["remove sth from","biror narsani ...dan olib tashlamoq (удалить что-либо из)"],
 ["an influence on","...ga ta’sir (влияние на)"],
 ["a picture of","...ning rasmi (изображение чего-либо)"]
-
 ],
 
 "Lesson 27":[
-
 ["Precision","aniqlik (точность)"],
 ["Misunderstood","noto‘g‘ri tushunilgan (неправильно понятый)"],
 ["Researcher","tadqiqotchi (исследователь)"],
@@ -719,14 +647,12 @@ const lessons = {
 ["Assist","yordam bermoq (помогать)"],
 ["afraid of","dan qo‘rqadigan (боящийся)"],
 ["aware of","dan xabardor (осведомлённый о)"],
-["enthusiastic about","ga juda qiziqadigan, ishtiyoqmand (увлечённый, полный энтузиазма по поводу)"],
+["enthusiastic about","ga juda qiziqadigan, ishtiyoqmand (увлечённый)"],
 ["serious about","ga jiddiy qaraydigan (серьёзно относящийся к)"],
 ["short of","yetishmaydigan (испытывающий нехватку)"]
-
 ],
 
 "Lesson 28":[
-
 ["Infrastructure","infratuzilma (инфраструктура)"],
 ["Heritage","meros (наследие)"],
 ["Sustainable","barqaror (устойчивый)"],
@@ -752,11 +678,9 @@ const lessons = {
 ["save sth from","biror narsani ...dan saqlamoq (спасти что-либо от)"],
 ["think about","haqida o‘ylamoq (думать о)"],
 ["worry about","haqida xavotir olmoq (беспокоиться о)"]
-
 ],
 
 "Lesson 29":[
-
 ["Equality","tenglik (равенство)"],
 ["Movement","harakat (движение)"],
 ["Opportunities","imkoniyatlar (возможности)"],
@@ -782,11 +706,9 @@ const lessons = {
 ["ashamed of","...dan uyalgan (стыдящийся)"],
 ["embarrassed about","...dan xijolat bo‘lgan (смущённый из-за)"],
 ["frightened of","...dan qo‘rqadigan (испуганный, боящийся)"]
-
 ],
 
 "Lesson 30":[
-
 ["Cultivated","yetishtirilgan (выращенный, культивируемый)"],
 ["Biotechnology","biotexnologiya (биотехнология)"],
 ["Occurring","yuzaga keladigan (происходящий, возникающий)"],
@@ -812,26 +734,24 @@ const lessons = {
 ["scared of","...dan qo‘rqadigan (боящийся)"],
 ["sorry about/for","...dan afsuslangan (сожалеющий о)"],
 ["surprised at/by","...dan hayratlangan (удивлённый)"]
-
 ]
 
 };
 
 
 /* =====================================================
-   SETTINGS
+SETTINGS
 ===================================================== */
 
-const QUESTION_COUNT = 15;
-const EXAM_TIME = 15 * 60;
+const QUESTION_COUNT = 20;
+const EXAM_TIME = 20 * 60;
 
-let selectedLesson = "";
+let allVocabulary = [];
 let questions = [];
 let currentQuestion = 0;
 
 let vocabScore = 0;
 let sentenceScore = 0;
-
 let checkedQuestions = 0;
 
 let timeLeft = EXAM_TIME;
@@ -842,966 +762,929 @@ let examCancelled = false;
 
 
 /* =====================================================
-   BUILD LESSONS
+COMBINE ALL VOCABULARY
 ===================================================== */
 
-function buildLessons(){
+function buildVocabulary(){
 
-    const list =
-        document.getElementById("lessonList");
+allVocabulary = [];
 
-    list.innerHTML = "";
+Object.keys(lessons).forEach(lesson=>{
 
-    Object.keys(lessons).forEach(lesson => {
+lessons[lesson].forEach(item=>{
 
-        const row =
-            document.createElement("div");
+allVocabulary.push({
+word:item[0],
+meaning:item[1],
+lesson:lesson
+});
 
-        row.className = "lesson-row";
+});
 
-        const name =
-            document.createElement("div");
-
-        name.className = "lesson-name";
-
-        name.textContent =
-            lesson;
-
-        name.onclick = () =>
-            startExam(lesson);
-
-
-        const review =
-            document.createElement("button");
-
-        review.className = "review-btn";
-
-        review.innerHTML = "📖";
-
-        review.title =
-            "Review vocabulary";
-
-        review.onclick = (event) => {
-
-            event.stopPropagation();
-
-            openReview(lesson);
-
-        };
-
-
-        row.appendChild(name);
-        row.appendChild(review);
-
-        list.appendChild(row);
-
-    });
+});
 
 }
 
 
 /* =====================================================
-   REVIEW
+START EXAM
 ===================================================== */
 
-function openReview(lesson){
+function startExam(){
 
-    document
-        .getElementById("reviewModal")
-        .classList
-        .remove("hidden");
+questions =
+getRandomQuestions(
+allVocabulary,
+QUESTION_COUNT
+);
 
-    document
-        .getElementById("reviewTitle")
-        .textContent =
-        lesson + " Vocabulary";
+currentQuestion = 0;
 
-    const box =
-        document.getElementById("reviewWords");
+vocabScore = 0;
+sentenceScore = 0;
+checkedQuestions = 0;
 
-    box.innerHTML = "";
+timeLeft = EXAM_TIME;
 
-    lessons[lesson].forEach((item,index)=>{
+examActive = true;
+examCancelled = false;
 
-        const div =
-            document.createElement("div");
+document
+.getElementById("beginPage")
+.classList
+.add("hidden");
 
-        div.className =
-            "word-item";
+document
+.getElementById("examPage")
+.classList
+.remove("hidden");
 
-        div.innerHTML =
-            `<b>${index+1}. ${escapeHTML(item[0])}</b>
-             <br>
-             ${escapeHTML(item[1])}`;
+document
+.getElementById("resultPage")
+.classList
+.add("hidden");
 
-        box.appendChild(div);
+updateTimer();
 
-    });
+loadQuestion();
 
-}
-
-
-function closeReview(){
-
-    document
-        .getElementById("reviewModal")
-        .classList
-        .add("hidden");
-
-}
-
-
-function closeReviewOutside(event){
-
-    if(
-        event.target.id === "reviewModal"
-    ){
-
-        closeReview();
-
-    }
+startTimer();
 
 }
 
 
 /* =====================================================
-   START EXAM
-===================================================== */
-
-function startExam(lesson){
-
-    selectedLesson = lesson;
-
-    questions =
-        getRandomQuestions(
-            lessons[lesson],
-            QUESTION_COUNT
-        );
-
-    currentQuestion = 0;
-
-    vocabScore = 0;
-    sentenceScore = 0;
-    checkedQuestions = 0;
-
-    timeLeft = EXAM_TIME;
-
-    examActive = true;
-    examCancelled = false;
-
-    document
-        .getElementById("lessonPage")
-        .classList
-        .add("hidden");
-
-    document
-        .getElementById("examPage")
-        .classList
-        .remove("hidden");
-
-    document
-        .getElementById("resultPage")
-        .classList
-        .add("hidden");
-
-    document.body.classList.add("exam-mode");
-
-    document
-        .getElementById("examLesson")
-        .textContent =
-        selectedLesson;
-
-    updateTimer();
-
-    loadQuestion();
-
-    startTimer();
-
-}
-
-
-/* =====================================================
-   RANDOM QUESTIONS
+RANDOM
 ===================================================== */
 
 function getRandomQuestions(array,count){
 
-    return [...array]
-        .sort(() => Math.random() - 0.5)
-        .slice(0,count);
+return [...array]
+.sort(()=>Math.random()-0.5)
+.slice(0,count);
 
 }
 
 
 /* =====================================================
-   LOAD QUESTION
+LOAD QUESTION
 ===================================================== */
 
 function loadQuestion(){
 
-    const item =
-        questions[currentQuestion];
+const item =
+questions[currentQuestion];
 
-    document
-        .getElementById("questionCounter")
-        .textContent =
-        `Question ${currentQuestion+1} / ${QUESTION_COUNT}`;
+document
+.getElementById("questionCounter")
+.textContent =
+`Question ${currentQuestion+1} / ${QUESTION_COUNT}`;
 
-    document
-        .getElementById("wordBox")
-        .innerHTML = `
+document
+.getElementById("wordBox")
+.innerHTML = `
 
-        <div class="meaning">
+<div class="meaning">
 
-            <b>🇺🇿 Uzbek:</b>
-            ${escapeHTML(item[1])}
+<b>🇺🇿 Uzbek:</b>
+${escapeHTML(item.meaning)}
 
-        </div>
+</div>
 
-        `;
+`;
 
-    document
-        .getElementById("vocabInput")
-        .value = "";
+document
+.getElementById("vocabInput")
+.value="";
 
-    document
-        .getElementById("sentenceInput")
-        .value = "";
+document
+.getElementById("sentenceInput")
+.value="";
 
-    document
-        .getElementById("questionFeedback")
-        .innerHTML = "";
+document
+.getElementById("questionFeedback")
+.innerHTML="";
 
 }
 
 
 /* =====================================================
-   TIMER
+TIMER
 ===================================================== */
 
 function updateTimer(){
 
-    const minutes =
-        Math.floor(timeLeft / 60);
+const minutes =
+Math.floor(timeLeft/60);
 
-    const seconds =
-        timeLeft % 60;
+const seconds =
+timeLeft%60;
 
-    document
-        .getElementById("timer")
-        .textContent =
-        `${String(minutes).padStart(2,"0")}:${String(seconds).padStart(2,"0")}`;
+document
+.getElementById("timer")
+.textContent =
+`${String(minutes).padStart(2,"0")}:${String(seconds).padStart(2,"0")}`;
 
 }
 
 
 function startTimer(){
 
-    clearInterval(timerInterval);
+clearInterval(timerInterval);
 
-    timerInterval =
-        setInterval(()=>{
+timerInterval =
+setInterval(()=>{
 
-            if(
-                !examActive ||
-                examCancelled
-            ){
+if(!examActive || examCancelled){
 
-                clearInterval(timerInterval);
+clearInterval(timerInterval);
+return;
 
-                return;
+}
 
-            }
+timeLeft--;
 
-            timeLeft--;
+updateTimer();
 
-            updateTimer();
+if(timeLeft<=0){
 
-            if(timeLeft <= 0){
+clearInterval(timerInterval);
 
-                clearInterval(timerInterval);
+finishExam();
 
-                finishExam();
+}
 
-            }
-
-        },1000);
+},1000);
 
 }
 
 
 /* =====================================================
-   CHECK QUESTION
+CHECK
 ===================================================== */
 
 async function checkCurrentQuestion(){
 
-    if(
-        !examActive ||
-        examCancelled
-    ){
+if(!examActive || examCancelled)
+return;
 
-        return;
+const item =
+questions[currentQuestion];
 
-    }
+const correctWord =
+item.word
+.trim()
+.toLowerCase();
 
-    const item =
-        questions[currentQuestion];
+const userWord =
+document
+.getElementById("vocabInput")
+.value
+.trim()
+.toLowerCase();
 
-    const correctWord =
-        item[0].trim().toLowerCase();
-
-    const userWord =
-        document
-            .getElementById("vocabInput")
-            .value
-            .trim()
-            .toLowerCase();
-
-    const sentence =
-        document
-            .getElementById("sentenceInput")
-            .value
-            .trim();
+const sentence =
+document
+.getElementById("sentenceInput")
+.value
+.trim();
 
 
-    if(!userWord){
+if(!userWord){
 
-        alert("Enter the English vocabulary.");
+alert("Enter the English vocabulary.");
+return;
 
-        return;
+}
 
-    }
+if(!sentence){
 
+alert("Write an English sentence.");
+return;
 
-    if(!sentence){
-
-        alert("Write an English sentence.");
-
-        return;
-
-    }
+}
 
 
-    let vocabCorrect =
-        userWord === correctWord;
-
-    if(vocabCorrect){
-
-        vocabScore++;
-
-    }
+const vocabCorrect =
+userWord === correctWord;
 
 
-    const feedback =
-        document
-            .getElementById("questionFeedback");
+if(vocabCorrect){
 
-    feedback.innerHTML =
-        "⏳ Checking your sentence with LanguageTool...";
+vocabScore++;
 
-
-    let grammarMatches = [];
-
-    try{
-
-        grammarMatches =
-            await grammarCheck(sentence);
-
-    }catch(error){
-
-        feedback.innerHTML = `
-            <p class="wrong">
-                ❌ LanguageTool error
-            </p>
-            <p>
-                ${escapeHTML(error.message)}
-            </p>
-        `;
-
-        return;
-
-    }
+}
 
 
-    const wordIncluded =
-        containsRequiredVocabulary(
-            sentence,
-            item[0]
-        );
+const feedback =
+document
+.getElementById("questionFeedback");
+
+feedback.innerHTML =
+"⏳ Checking your sentence with LanguageTool...";
 
 
-    const sentenceCorrect =
-        wordIncluded &&
-        grammarMatches.length === 0;
+let grammarMatches=[];
 
 
-    if(sentenceCorrect){
+try{
 
-        sentenceScore++;
+grammarMatches =
+await grammarCheck(sentence);
 
-    }
+}catch(error){
 
+feedback.innerHTML=`
 
-    checkedQuestions++;
+<p class="wrong">
+❌ LanguageTool error
+</p>
 
+<p>
+${escapeHTML(error.message)}
+</p>
 
-    let html = "";
+`;
 
-    html += vocabCorrect
-        ? `<p class="correct">✅ Vocabulary: +1 point</p>`
-        : `
-            <p class="wrong">
-                ❌ Vocabulary: 0 point
-                <br>
-                Correct answer:
-                <b>${escapeHTML(item[0])}</b>
-            </p>
-          `;
+return;
 
-
-    if(!wordIncluded){
-
-        html += `
-            <div class="grammar-error">
-
-                <b>❌ Required vocabulary was not used in the sentence.</b>
-
-                <p>
-                You must use:
-                <span class="wrong-text">
-                ${escapeHTML(item[0])}
-                </span>
-                </p>
-
-            </div>
-        `;
-
-    }
+}
 
 
-    if(grammarMatches.length === 0){
-
-        html += `
-            <p class="correct">
-                ✅ LanguageTool: No grammar or spelling errors found.
-            </p>
-        `;
-
-    }else{
-
-        html += `
-            <p class="wrong">
-                ❌ LanguageTool found
-                ${grammarMatches.length}
-                issue(s):
-            </p>
-        `;
-
-        html += createGrammarDetails(
-            sentence,
-            grammarMatches
-        );
-
-    }
+const wordIncluded =
+containsRequiredVocabulary(
+sentence,
+item.word
+);
 
 
-    html += sentenceCorrect
-        ? `<p class="correct">✅ Sentence: +1 point</p>`
-        : `<p class="wrong">❌ Sentence: 0 point</p>`;
+const sentenceCorrect =
+wordIncluded &&
+grammarMatches.length===0;
 
 
-    feedback.innerHTML =
-        html;
+if(sentenceCorrect){
+
+sentenceScore++;
+
+}
+
+
+checkedQuestions++;
+
+
+let html="";
+
+
+html += vocabCorrect
+
+? `<p class="correct">
+✅ Vocabulary: +1 point
+</p>`
+
+: `<p class="wrong">
+❌ Vocabulary: 0 point
+<br>
+Correct answer:
+<b>${escapeHTML(item.word)}</b>
+</p>`;
+
+
+if(!wordIncluded){
+
+html += `
+
+<div class="grammar-error">
+
+<b>
+❌ Required vocabulary was not used.
+</b>
+
+<p>
+
+You must use:
+
+<span class="wrong-text">
+${escapeHTML(item.word)}
+</span>
+
+</p>
+
+</div>
+
+`;
+
+}
+
+
+if(grammarMatches.length===0){
+
+html += `
+
+<p class="correct">
+
+✅ LanguageTool:
+No grammar or spelling errors found.
+
+</p>
+
+`;
+
+}else{
+
+html += `
+
+<p class="wrong">
+
+❌ LanguageTool found
+${grammarMatches.length}
+issue(s):
+
+</p>
+
+`;
+
+html +=
+createGrammarDetails(
+sentence,
+grammarMatches
+);
+
+}
+
+
+html += sentenceCorrect
+
+? `<p class="correct">
+✅ Sentence: +1 point
+</p>`
+
+: `<p class="wrong">
+❌ Sentence: 0 point
+</p>`;
+
+
+feedback.innerHTML=html;
 
 }
 
 
 /* =====================================================
-   LANGUAGE TOOL
+LANGUAGE TOOL
 ===================================================== */
 
 async function grammarCheck(sentence){
 
-    const body =
-        new URLSearchParams();
+const body =
+new URLSearchParams();
 
-    body.append(
-        "text",
-        sentence
-    );
+body.append(
+"text",
+sentence
+);
 
-    body.append(
-        "language",
-        "en-US"
-    );
-
-
-    const response =
-        await fetch(
-            "https://api.languagetool.org/v2/check",
-            {
-                method:"POST",
-
-                headers:{
-                    "Content-Type":
-                        "application/x-www-form-urlencoded"
-                },
-
-                body:body.toString()
-            }
-        );
+body.append(
+"language",
+"en-US"
+);
 
 
-    if(!response.ok){
+const response =
+await fetch(
+"https://api.languagetool.org/v2/check",
+{
+method:"POST",
 
-        throw new Error(
-            "LanguageTool request failed."
-        );
+headers:{
+"Content-Type":
+"application/x-www-form-urlencoded"
+},
 
-    }
+body:body.toString()
+}
+);
 
 
-    const data =
-        await response.json();
+if(!response.ok){
 
-    return data.matches || [];
+throw new Error(
+"LanguageTool request failed."
+);
+
+}
+
+
+const data =
+await response.json();
+
+return data.matches || [];
 
 }
 
 
 /* =====================================================
-   GRAMMAR DETAILS
+GRAMMAR DETAILS
 ===================================================== */
 
 function createGrammarDetails(
-    sentence,
-    matches
+sentence,
+matches
 ){
 
-    let html = "";
-
-    matches
-        .slice(0,5)
-        .forEach((match,index)=>{
-
-            const wrongText =
-                sentence.substring(
-                    match.offset,
-                    match.offset + match.length
-                );
+let html="";
 
 
-            const suggestions =
-                (match.replacements || [])
-                .slice(0,5)
-                .map(
-                    r => r.value
-                );
+matches
+.slice(0,5)
+.forEach((match,index)=>{
+
+const wrongText =
+sentence.substring(
+match.offset,
+match.offset+match.length
+);
 
 
-            html += `
-
-            <div class="grammar-error">
-
-                <b>
-                    ${index+1}. ${escapeHTML(match.message || "Error")}
-                </b>
-
-                <p>
-                    Wrong text:
-                    <span class="wrong-text">
-                        "${escapeHTML(wrongText)}"
-                    </span>
-                </p>
-
-                ${
-                    suggestions.length
-                    ?
-                    `
-                    <div class="suggestions">
-                        <b>Possible correction:</b>
-                        ${suggestions
-                            .map(
-                                s =>
-                                `<span>
-                                    ${escapeHTML(s)}
-                                </span>`
-                            )
-                            .join(", ")}
-                    </div>
-                    `
-                    :
-                    `<p>No replacement suggestion.</p>`
-                }
-
-            </div>
-
-            `;
-
-        });
+const suggestions =
+(match.replacements || [])
+.slice(0,5)
+.map(r=>r.value);
 
 
-    if(matches.length > 5){
+html += `
 
-        html += `
-            <p>
-                Showing first 5 errors.
-                Total errors:
-                ${matches.length}
-            </p>
-        `;
+<div class="grammar-error">
 
-    }
+<b>
+${index+1}.
+${escapeHTML(
+match.message ||
+"Error"
+)}
+</b>
+
+<p>
+
+Wrong text:
+
+<span class="wrong-text">
+"${escapeHTML(wrongText)}"
+</span>
+
+</p>
+
+${
+suggestions.length
+
+?
+
+`
+
+<div>
+
+<b>
+Possible correction:
+</b>
+
+${suggestions
+.map(
+s=>`<span>
+${escapeHTML(s)}
+</span>`
+)
+.join(", ")}
+
+</div>
+
+`
+
+:
+
+`<p>
+No replacement suggestion.
+</p>`
+}
+
+</div>
+
+`;
+
+});
 
 
-    return html;
+if(matches.length>5){
+
+html += `
+
+<p>
+Showing first 5 errors.
+Total errors:
+${matches.length}
+</p>
+
+`;
+
+}
+
+
+return html;
 
 }
 
 
 /* =====================================================
-   VOCABULARY IN SENTENCE
+VOCABULARY IN SENTENCE
 ===================================================== */
 
 function containsRequiredVocabulary(
-    sentence,
-    vocabulary
+sentence,
+vocabulary
 ){
 
-    const cleanSentence =
-        sentence
-            .toLowerCase()
-            .replace(/[.,!?;:"'()]/g," ");
+const cleanSentence =
+sentence
+.toLowerCase()
+.replace(
+/[.,!?;:"'()]/g,
+" "
+);
 
-    const cleanVocabulary =
-        vocabulary
-            .toLowerCase()
-            .replace(/[.,!?;:"'()]/g," ")
-            .trim();
+const cleanVocabulary =
+vocabulary
+.toLowerCase()
+.replace(
+/[.,!?;:"'()]/g,
+" "
+)
+.trim();
 
 
-    return cleanSentence
-        .includes(cleanVocabulary);
+return cleanSentence
+.includes(cleanVocabulary);
 
 }
 
 
 /* =====================================================
-   NEXT QUESTION
+NEXT
 ===================================================== */
 
 function nextQuestion(){
 
-    if(
-        !examActive ||
-        examCancelled
-    ){
-
-        return;
-
-    }
+if(!examActive || examCancelled)
+return;
 
 
-    if(
-        checkedQuestions <= currentQuestion
-    ){
+if(
+checkedQuestions <= currentQuestion
+){
 
-        alert(
-            "First check this question."
-        );
+alert(
+"First check this question."
+);
 
-        return;
+return;
 
-    }
+}
 
 
-    if(
-        currentQuestion <
-        QUESTION_COUNT - 1
-    ){
+if(
+currentQuestion <
+QUESTION_COUNT-1
+){
 
-        currentQuestion++;
+currentQuestion++;
 
-        loadQuestion();
+loadQuestion();
 
-    }else{
+}else{
 
-        finishExam();
+finishExam();
 
-    }
+}
 
 }
 
 
 /* =====================================================
-   FINISH EXAM
+FINISH
 ===================================================== */
 
 function finishExam(){
 
-    if(!examActive) return;
+if(!examActive)
+return;
 
-    examActive = false;
+examActive=false;
 
-    clearInterval(timerInterval);
-
-    document.body.classList.remove("exam-mode");
-
-    document
-        .getElementById("examPage")
-        .classList
-        .add("hidden");
-
-    document
-        .getElementById("resultPage")
-        .classList
-        .remove("hidden");
+clearInterval(timerInterval);
 
 
-    const total =
-        vocabScore + sentenceScore;
+document
+.getElementById("examPage")
+.classList
+.add("hidden");
 
-    const percentage =
-        Math.round(
-            (total / 30) * 100
-        );
-
-
-    document
-        .getElementById("finalScore")
-        .textContent =
-        `${total} / 30 (${percentage}%)`;
+document
+.getElementById("resultPage")
+.classList
+.remove("hidden");
 
 
-    document
-        .getElementById("resultDetails")
-        .innerHTML = `
+const total =
+vocabScore +
+sentenceScore;
 
-        <div class="result-box">
-            <b>📚 Lesson:</b>
-            ${escapeHTML(selectedLesson)}
-        </div>
 
-        <div class="result-box">
-            <b>🔤 Vocabulary score:</b>
-            ${vocabScore} / 15
-        </div>
+const percentage =
+Math.round(
+(total/40)*100
+);
 
-        <div class="result-box">
-            <b>✍️ Sentence score:</b>
-            ${sentenceScore} / 15
-        </div>
 
-        <div class="result-box">
-            <b>🏆 Total:</b>
-            ${total} / 30
-        </div>
+document
+.getElementById("finalScore")
+.textContent =
+`${total} / 40 (${percentage}%)`;
 
-        <div class="result-box">
-            <b>📊 Percentage:</b>
-            ${percentage}%
-        </div>
 
-        `;
+document
+.getElementById("resultDetails")
+.innerHTML=`
+
+<div class="result-box">
+
+<b>
+📚 Exam:
+</b>
+
+Lessons 21–30
+
+</div>
+
+
+<div class="result-box">
+
+<b>
+🔤 Vocabulary score:
+</b>
+
+${vocabScore} / 20
+
+</div>
+
+
+<div class="result-box">
+
+<b>
+✍️ Sentence score:
+</b>
+
+${sentenceScore} / 20
+
+</div>
+
+
+<div class="result-box">
+
+<b>
+🏆 Total:
+</b>
+
+${total} / 40
+
+</div>
+
+
+<div class="result-box">
+
+<b>
+📊 Percentage:
+</b>
+
+${percentage}%
+
+</div>
+
+`;
 
 }
 
 
 /* =====================================================
-   NEW EXAM
+NEW EXAM
 ===================================================== */
 
 function newExam(){
 
-    clearInterval(timerInterval);
+clearInterval(timerInterval);
 
-    examActive = false;
-    examCancelled = false;
+examActive=false;
+examCancelled=false;
 
-    questions = [];
-    currentQuestion = 0;
+questions=[];
+currentQuestion=0;
 
-    vocabScore = 0;
-    sentenceScore = 0;
-    checkedQuestions = 0;
+vocabScore=0;
+sentenceScore=0;
+checkedQuestions=0;
 
-    timeLeft = EXAM_TIME;
+timeLeft=EXAM_TIME;
 
-    document
-        .getElementById("resultPage")
-        .classList
-        .add("hidden");
+updateTimer();
 
-    document
-        .getElementById("examPage")
-        .classList
-        .add("hidden");
 
-    document
-        .getElementById("lessonPage")
-        .classList
-        .remove("hidden");
+document
+.getElementById("resultPage")
+.classList
+.add("hidden");
+
+document
+.getElementById("examPage")
+.classList
+.add("hidden");
+
+document
+.getElementById("beginPage")
+.classList
+.remove("hidden");
 
 }
 
 
 /* =====================================================
-   ANTI-CHEAT
+ANTI-CHEAT
 ===================================================== */
 
 function cancelExam(){
 
-    if(
-        !examActive ||
-        examCancelled
-    ){
-
-        return;
-
-    }
+if(
+!examActive ||
+examCancelled
+)
+return;
 
 
-    examCancelled = true;
-    examActive = false;
+examCancelled=true;
+examActive=false;
 
-    clearInterval(timerInterval);
+clearInterval(timerInterval);
 
-    document.body.classList.remove("exam-mode");
 
-    document
-        .getElementById("examPage")
-        .classList
-        .add("hidden");
+document
+.getElementById("examPage")
+.classList
+.add("hidden");
 
-    document
-        .getElementById("lessonPage")
-        .classList
-        .remove("hidden");
+document
+.getElementById("beginPage")
+.classList
+.remove("hidden");
 
-    alert(
-        "❌ Exam cancelled.\n\n" +
-        "The exam was cancelled because you left the exam window or tab."
-    );
+
+alert(
+"❌ Exam cancelled.\n\n"+
+"The exam was cancelled because you left the exam window or tab."
+);
 
 }
 
 
-/* Tab change */
 document.addEventListener(
-    "visibilitychange",
-    ()=>{
+"visibilitychange",
+()=>{
 
-        if(document.hidden){
+if(document.hidden){
 
-            cancelExam();
+cancelExam();
 
-        }
+}
 
-    }
+}
 );
 
 
-/* Window loses focus */
 window.addEventListener(
-    "blur",
-    ()=>{
+"blur",
+()=>{
 
-        if(examActive){
+if(examActive){
 
-            cancelExam();
+cancelExam();
 
-        }
+}
 
-    }
+}
 );
 
 
-/* Page hidden */
 window.addEventListener(
-    "pagehide",
-    ()=>{
+"pagehide",
+()=>{
 
-        if(examActive){
+if(examActive){
 
-            cancelExam();
+cancelExam();
 
-        }
+}
 
-    }
+}
 );
 
 
-/* Orientation change */
 window.addEventListener(
-    "orientationchange",
-    ()=>{
+"orientationchange",
+()=>{
 
-        if(examActive){
+if(examActive){
 
-            cancelExam();
+cancelExam();
 
-        }
+}
 
-    }
+}
 );
 
 
 /* =====================================================
-   THEME
+THEME
 ===================================================== */
 
 function toggleTheme(){
 
-    document.body.classList.toggle("dark");
+document.body
+.classList
+.toggle("dark");
 
-    localStorage.setItem(
-        "vocabTheme",
-        document.body.classList.contains("dark")
-        ? "dark"
-        : "light"
-    );
+localStorage.setItem(
+"vocabTheme",
+document.body.classList.contains("dark")
+?"dark"
+:"light"
+);
 
 }
 
 
 function loadTheme(){
 
-    const theme =
-        localStorage.getItem(
-            "vocabTheme"
-        );
+const theme =
+localStorage.getItem(
+"vocabTheme"
+);
 
-    if(theme === "dark"){
+if(theme==="dark"){
 
-        document.body.classList.add("dark");
+document.body
+.classList
+.add("dark");
 
-    }
+}
 
 }
 
 
 /* =====================================================
-   ESCAPE HTML
+ESCAPE HTML
 ===================================================== */
 
 function escapeHTML(text){
 
-    return String(text)
-        .replace(/&/g,"&amp;")
-        .replace(/</g,"&lt;")
-        .replace(/>/g,"&gt;")
-        .replace(/"/g,"&quot;")
-        .replace(/'/g,"&#039;");
+return String(text)
+.replace(/&/g,"&amp;")
+.replace(/</g,"&lt;")
+.replace(/>/g,"&gt;")
+.replace(/"/g,"&quot;")
+.replace(/'/g,"&#039;");
 
 }
 
 
 /* =====================================================
-   INITIAL
+INITIAL
 ===================================================== */
 
-buildLessons();
+buildVocabulary();
 loadTheme();
 
 </script>
